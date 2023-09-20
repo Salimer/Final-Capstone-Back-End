@@ -70,6 +70,5 @@ group :test do
   gem 'selenium-webdriver'
 end
 
-gem 'devise'
 gem 'rack-cors'
 gem 'rubocop', '>= 1.0', '< 2.0'

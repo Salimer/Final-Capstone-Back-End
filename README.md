@@ -158,9 +158,7 @@ If you found this project helpful, consider giving a ⭐️!
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-### Acknowledgments
-
-I would like to express my deepest gratitude to all the individuals and institutions that have contributed to making this project possible.
+We would like to express our deepest gratitude to all the people and institutions that have contributed to make this project possible.
 
 #### Development Team
 - **Sumeya Ibrahim**: Thank you for your constant support and your incredible problem-solving skills. Your knowledge and experience have been invaluable.

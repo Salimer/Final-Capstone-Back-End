@@ -26,6 +26,7 @@ development:
   database: Final_Capstone_Back_End_development
   username: postgres
   password: EDQSQL55@@
+  # password2
   host: localhost
   port: 5432
 
@@ -64,6 +65,7 @@ test:
   database: Final_Capstone_Back_End_test
   username: postgres
   password: EDQSQL55@@
+  # password2
   host: localhost
   port: 5432
 

@@ -9,6 +9,7 @@ class CreateItems < ActiveRecord::Migration[7.0]
       t.integer :option_to_purchase_fee
       t.integer :total_amount_payable
       t.integer :duration
+      t.boolean :removed
 
       t.timestamps
     end

@@ -18,6 +18,7 @@ module Api
       # POST /items
       def create
         @item = Item.new(item_params)
+        @item.removed = false
 
         if @item.save
           render json: @item, status: :created, location: api_v1_item_url(@item)
@@ -50,7 +51,7 @@ module Api
       # Only allow a list of trusted parameters through.
       def item_params
         params.require(:item).permit(:name, :image, :description, :deposit, :finance_fee, :option_to_purchase_fee,
-                                     :total_amount_payable, :duration)
+                                     :total_amount_payable, :duration, :removed)
       end
     end
   end

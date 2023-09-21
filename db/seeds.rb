@@ -16,7 +16,8 @@ item1 = Item.create(
   finance_fee: 100,
   option_to_purchase_fee: 50,
   total_amount_payable: 5000,
-  duration: 36
+  duration: 36,
+  removed: false
 )
 
 item2 = Item.create(
@@ -27,7 +28,8 @@ item2 = Item.create(
   finance_fee: 150,
   option_to_purchase_fee: 75,
   total_amount_payable: 7500,
-  duration: 48
+  duration: 48,
+  removed: false
 )
 
 Reservation.create(user_id: user1.id, item_id: item1.id, city: 'New York')

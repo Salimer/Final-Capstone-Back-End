@@ -96,6 +96,19 @@ json
   }
 }`
 
+- PATCH /items/:id
+  
+Description: Update any attribute of an item
+
+Body: 
+json
+
+`{
+  "item": {
+    "removed": true
+  }
+}`
+
 - DELETE /items/:id
 
 Description: Delete an item by ID.

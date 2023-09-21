@@ -23,6 +23,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_21_103913) do
     t.integer "option_to_purchase_fee"
     t.integer "total_amount_payable"
     t.integer "duration"
+    t.boolean "removed"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

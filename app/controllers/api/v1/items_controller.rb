@@ -1,52 +1,55 @@
 module Api
   module V1
     class ItemsController < ApplicationController
+      before_action :set_item, only: %i[show update destroy]
+
+      # GET /items
       def index
         @items = Item.all
-        render json: @items, status: :ok
+
+        render json: @items
       end
 
+      # GET /items/1
       def show
-        @item = Item.find(params[:id])
-        render json: @item, status: :ok
-      rescue ActiveRecord::RecordNotFound
-        render json: { error: 'Item not found' }, status: :not_found
+        render json: @item
       end
 
+      # POST /items
       def create
         @item = Item.new(item_params)
+
         if @item.save
-          render json: @item, status: :created
+          render json: @item, status: :created, location: @item
         else
-          render json: { errors: @item.errors.full_messages }, status: :unprocessable_entity
+          render json: @item.errors, status: :unprocessable_entity
         end
       end
 
+      # PATCH/PUT /items/1
       def update
-        @item = Item.find(params[:id])
         if @item.update(item_params)
-          render json: @item, status: :ok
+          render json: @item
         else
-          render json: { errors: @item.errors.full_messages }, status: :unprocessable_entity
+          render json: @item.errors, status: :unprocessable_entity
         end
-      rescue ActiveRecord::RecordNotFound
-        render json: { error: 'Item not found' }, status: :not_found
       end
 
+      # DELETE /items/1
       def destroy
-        @item = Item.find(params[:id])
-        @item.reservations.destroy_all
         @item.destroy
-        head :no_content
-      rescue ActiveRecord::RecordNotFound
-        render json: { error: 'Item not found' }, status: :not_found
       end
 
       private
 
+      # Use callbacks to share common setup or constraints between actions.
+      def set_item
+        @item = Item.find(params[:id])
+      end
+
+      # Only allow a list of trusted parameters through.
       def item_params
-        params.require(:item).permit(:name, :image, :description, :deposit, :finance_fee, :option_to_purchase_fee,
-                                     :total_amount_payable, :duration)
+        params.require(:item).permit(:name)
       end
     end
   end

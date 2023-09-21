@@ -22,6 +22,14 @@ module Api
         end
       end
 
+      def destroy
+        @reservation = Reservation.find(params[:id])
+        @reservation.destroy
+        head :no_content
+      rescue ActiveRecord::RecordNotFound
+        render json: { error: 'Reservation not found' }, status: :not_found
+      end
+
       private
 
       def reservation_params

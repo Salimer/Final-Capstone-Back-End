@@ -3,7 +3,7 @@
 ## Introduction
 
 Base URL
-The base URL for our API is: http://example.com/api/v1
+The base URL for our API is: http://localhost:3000/api/v1
 
 ### Endpoints
 
@@ -112,7 +112,7 @@ Description: Get a list of all reservations.
 Description: Get details of a specific reservation by ID.
 Status Code: 200 OK
 
-- GET /users/:user_id/reservations/:id
+- GET /users/:user_id/reservations
 
 Description: Get reservations of a specific user.
 Status Code: 200 OK

@@ -14,3 +14,10 @@
 #       methods: [:get, :post, :put, :patch, :delete, :options, :head]
 #   end
 # end
+
+Rails.application.config.middleware.insert_before Rails::Rack::Logger, Rack::Cors do
+    allow do
+      origins '*'
+      resource '*', headers: :any, methods: [:get, :post, :put, :patch, :delete, :options, :head]
+    end
+end

@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  item: one
+  city: MyString
+  date: 2023-09-20
+
+two:
+  user: two
+  item: two
+  city: MyString
+  date: 2023-09-20

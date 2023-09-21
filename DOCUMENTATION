@@ -1,0 +1,161 @@
+# API Documentation
+
+## Introduction
+
+Base URL
+The base URL for our API is: http://example.com/api/v1
+
+### Endpoints
+
+#### Users
+
+- GET /users
+  
+Description: Get a list of all users.
+Response:
+Status Code: 200 OK
+Body:
+json
+
+`[
+  {
+    "id": 1,
+    "username": "user1"
+  },
+  {
+    "id": 2,
+    "username": "user2"
+  }
+]`
+
+- GET /users/:id
+
+Description: Get details of a specific user by ID.
+Status Code: 200 OK
+Body:
+json
+
+`{
+  "id": 1,
+  "username": "user1"
+}`
+
+- POST /users
+
+Description: Create a new user.
+Body:
+json
+
+`{
+  "user": {
+    "username": "new_user"
+  }
+}`
+
+Response:
+Status Code: 201 Created
+Body:
+json
+`{
+  "id": 3,
+  "username": "new_user"
+}`
+
+- DELETE /users/:id
+
+Description: Delete a user by ID.
+Status Code: 204 No Content
+#### Items
+
+- GET /items
+  
+Description: Get a list of all items.
+
+- GET /items/:id
+
+Description: Get details of a specific item by ID.
+Status Code: 200 OK
+
+- POST /items
+
+Description: Create a new item.
+
+Body:
+json
+
+`{
+  "item": {
+    "name": "New Item Name",
+    "image": "https://example.com/item-image.jpg",
+    "description": "Item description",
+    "deposit": 100,
+    "finance_fee": 10,
+    "option_to_purchase_fee": 5,
+    "total_amount_payable": 200,
+    "duration": 12
+  }
+}`
+
+- DELETE /items/:id
+
+Description: Delete an item by ID.
+Status Code: 204 No Content
+
+#### Reservations
+
+- GET /reservations
+  
+Description: Get a list of all reservations.
+
+- GET /reservations/:id
+
+Description: Get details of a specific reservation by ID.
+Status Code: 200 OK
+
+- GET /users/:user_id/reservations/:id
+
+Description: Get reservations of a specific user.
+Status Code: 200 OK
+
+- POST /reservations
+
+Description: Create a new reservations.
+
+Body:
+json
+
+`{
+  "reservation": {
+    "user_id": 1, // The ID of the user making the reservation
+    "item_id": 2, // The ID of the item being reserved
+    "city": "New York",
+  }
+}`
+
+- DELETE /reservations/:id
+
+Description: Delete an item by ID.
+Status Code: 204 No Content
+
+Errors
+
+In case of an error, the API will return a JSON response with an error message and an appropriate status code.
+
+Example Error Response:
+
+json
+Copy code
+{
+  "error": "User not found"
+}
+Rate Limiting
+
+[Include information about rate limiting if applicable.]
+
+Versioning
+
+[Describe your API versioning strategy, if any.]
+
+Conclusion
+
+Thank you for using our API! If you have any questions or need further assistance, please don't hesitate to contact us at [Your Contact Information].

@@ -30,10 +30,18 @@ module Api
         render json: { error: 'Reservation not found' }, status: :not_found
       end
 
+      def user_reservations
+        user = User.find(params[:user_id])
+        @reservations = user.reservations
+        render json: @reservations, status: :ok
+      rescue ActiveRecord::RecordNotFound
+        render json: { error: 'User not found' }, status: :not_found
+      end
+
       private
 
       def reservation_params
-        params.require(:reservation).permit(:user_id, :item_id, :city, :date)
+        params.require(:reservation).permit(:user_id, :item_id, :city)
       end
     end
   end

@@ -20,7 +20,7 @@ module Api
         @item = Item.new(item_params)
 
         if @item.save
-          render json: @item, status: :created, location: @item
+          render json: @item, status: :created, location: api_v1_item_url(@item)
         else
           render json: @item.errors, status: :unprocessable_entity
         end
@@ -49,7 +49,8 @@ module Api
 
       # Only allow a list of trusted parameters through.
       def item_params
-        params.require(:item).permit(:name)
+        params.require(:item).permit(:name, :image, :description, :deposit, :finance_fee, :option_to_purchase_fee,
+                                     :total_amount_payable, :duration)
       end
     end
   end

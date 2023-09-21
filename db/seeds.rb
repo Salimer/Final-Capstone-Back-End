@@ -30,5 +30,5 @@ item2 = Item.create(
   duration: 48
 )
 
-Reservation.create(user_id: user1.id, item_id: item1.id, city: 'New York', date: Date.today)
-Reservation.create(user_id: user2.id, item_id: item2.id, city: 'Los Angeles', date: Date.today)
+Reservation.create(user_id: user1.id, item_id: item1.id, city: 'New York')
+Reservation.create(user_id: user2.id, item_id: item2.id, city: 'Los Angeles')

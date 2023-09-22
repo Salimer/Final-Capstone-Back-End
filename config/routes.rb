@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+  namespace :api do
+    namespace :v1 do
+      # Get reservations for a user
+      get 'users/:user_id/reservations', to: 'reservations#user_reservations'
+      
+      resources :items
+      resources :users
+      resources :reservations
+    end
+  end
 end

@@ -2,25 +2,35 @@
 
 <a name="readme-top"></a>
 
+<div>
+<h2>ER Diagrma</h2>
+
+</div>
+
 # 📗 Table of Contents 
 
-- [📖 About the Project](#about-project)
-  - [🚀 Frontend App](#frontend)
-  - [🛠 Built With](#built-with)
-    - [Tech Stack](#tech-stack)
-    - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
-  - [🔭 Video Presentation](#video)
-- [💻 Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Install](#install)
-  - [Usage](#usage)
-- [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
-- [🤝 Contributing](#contributing)
-- [⭐️ Show your support](#support)
-- [🙏 Acknowledgments](#acknowledgements)
-- [📝 License](#license)
+- [Final group capstone - Book an Appointment](#final-group-capstone---book-an-appointment)
+- [📗 Table of Contents](#-table-of-contents)
+- [📖 Final group capstone - Book an Appointment ](#-final-group-capstone---book-an-appointment-)
+  - [🚀 Frontend App ](#-frontend-app-)
+  - [🛠 Built With ](#-built-with-)
+    - [Tech Stack ](#tech-stack-)
+    - [Key Features ](#key-features-)
+  - [🚀 Live Demo ](#-live-demo-)
+  - [🔭 Video Presentation ](#-video-presentation-)
+  - [💻 Getting Started ](#-getting-started-)
+    - [Prerequisites](#prerequisites)
+    - [Install](#install)
+    - [Usage](#usage)
+  - [👥 Authors ](#-authors-)
+  - [🔭 Future Features ](#-future-features-)
+  - [🤝 Contributing ](#-contributing-)
+  - [⭐️ Show your support ](#️-show-your-support-)
+  - [🙏 Acknowledgments ](#-acknowledgments-)
+      - [Development Team](#development-team)
+      - [Institution](#institution)
+      - [Reference Design](#reference-design)
+  - [📝 License ](#-license-)
 
 <!-- PROJECT DESCRIPTION -->
 

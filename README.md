@@ -2,8 +2,9 @@
 
 <a name="readme-top"></a>
 
-<div>
+<div align="center">
 <h2>ER Diagrma</h2>
+<img width="741" alt="Screenshot 2023-09-25 at 12 07 22" src="https://github.com/Salimer/Final-Capstone-Back-End/assets/52242629/596245e7-bca4-4450-af17-43997ac4b1df">
 
 </div>
 

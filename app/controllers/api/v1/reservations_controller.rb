@@ -44,8 +44,8 @@ module Api
         user = User.find(params[:user_id])
         @user_items = user.items
         render json: @user_items, status: :ok
-        rescue ActiveRecord::RecordNotFound
-          render jsog: { error: 'Items not found' }, status: :not_found
+      rescue ActiveRecord::RecordNotFound
+        render json: { error: 'Items not found' }, status: :not_found
       end
 
       private

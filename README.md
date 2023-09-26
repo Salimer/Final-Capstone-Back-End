@@ -14,6 +14,7 @@
 - [📗 Table of Contents](#-table-of-contents)
 - [📖 Final group capstone - Book an Appointment ](#-final-group-capstone---book-an-appointment-)
   - [🚀 Frontend App ](#-frontend-app-)
+  - [🤝 API documentation ](#-api-documentation-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -45,6 +46,11 @@ The project we built for the Final Project is based on an app to book an appoint
 - [Click here to navigate to the Frontend ](https://github.com/Salimer/Final-Capstone-Front-End)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🚀 API Documentation <a name="api-documentation"></a>
+
+- http://localhost:3000/api-docs
+
 
 ## 🛠 Built With <a name="built-with"></a>
 

@@ -2,25 +2,36 @@
 
 <a name="readme-top"></a>
 
+<div align="center">
+<h2>ER Diagrma</h2>
+<img width="741" alt="Screenshot 2023-09-25 at 12 07 22" src="https://github.com/Salimer/Final-Capstone-Back-End/assets/52242629/596245e7-bca4-4450-af17-43997ac4b1df">
+
+</div>
+
 # 📗 Table of Contents 
 
-- [📖 About the Project](#about-project)
-  - [🚀 Frontend App](#frontend)
-  - [🛠 Built With](#built-with)
-    - [Tech Stack](#tech-stack)
-    - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
-  - [🔭 Video Presentation](#video)
-- [💻 Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Install](#install)
-  - [Usage](#usage)
-- [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
-- [🤝 Contributing](#contributing)
-- [⭐️ Show your support](#support)
-- [🙏 Acknowledgments](#acknowledgements)
-- [📝 License](#license)
+- [Final group capstone - Book an Appointment](#final-group-capstone---book-an-appointment)
+- [📗 Table of Contents](#-table-of-contents)
+- [📖 Final group capstone - Book an Appointment ](#-final-group-capstone---book-an-appointment-)
+  - [🚀 Frontend App ](#-frontend-app-)
+  - [🛠 Built With ](#-built-with-)
+    - [Tech Stack ](#tech-stack-)
+    - [Key Features ](#key-features-)
+  - [🚀 Live Demo ](#-live-demo-)
+  - [🔭 Video Presentation ](#-video-presentation-)
+  - [💻 Getting Started ](#-getting-started-)
+    - [Prerequisites](#prerequisites)
+    - [Install](#install)
+    - [Usage](#usage)
+  - [👥 Authors ](#-authors-)
+  - [🔭 Future Features ](#-future-features-)
+  - [🤝 Contributing ](#-contributing-)
+  - [⭐️ Show your support ](#️-show-your-support-)
+  - [🙏 Acknowledgments ](#-acknowledgments-)
+      - [Development Team](#development-team)
+      - [Institution](#institution)
+      - [Reference Design](#reference-design)
+  - [📝 License ](#-license-)
 
 <!-- PROJECT DESCRIPTION -->
 

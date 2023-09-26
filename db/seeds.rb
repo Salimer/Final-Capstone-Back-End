@@ -32,5 +32,6 @@ item2 = Item.create(
   removed: false
 )
 
-Reservation.create(user_id: user1.id, item_id: item1.id, city: 'New York')
-Reservation.create(user_id: user2.id, item_id: item2.id, city: 'Los Angeles')
+Reservation.create(user_id: user1.id, item_id: item1.id, city: 'New York', date: "25/09/2023")
+Reservation.create(user_id: user1.id, item_id: item2.id, city: 'New York', date: "03/03/2020")
+Reservation.create(user_id: user2.id, item_id: item2.id, city: 'Los Angeles', date: "18/04/2019")

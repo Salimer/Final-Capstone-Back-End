@@ -227,7 +227,6 @@ paths:
 # =====================
 # Reservations Controller
 # =====================
-  paths:
   /api/v1/reservations:
     get:
       summary: Retrieve a list of all reservations
@@ -238,6 +237,7 @@ paths:
           description: Unauthorized
     post:
       summary: Create a new reservation
+      description: The reservation date is set using the `created_at` field.
       requestBody:
         required: true
         content:
@@ -254,9 +254,10 @@ paths:
                 city:
                   type: string
                   example: "New York"
-                date:
+                created_at:
                   type: string
-                  example: "2023-10-01"
+                  format: date-time
+                  example: "2023-10-01T12:00:00Z"
       responses:
         '201':
           description: Successfully created
@@ -278,6 +279,7 @@ paths:
           description: Reservation not found
     patch:
       summary: Update a reservation by ID
+      description: Updating the reservation might involve changing the `created_at` field.
       parameters:
       - name: reservation_id
         in: path
@@ -300,9 +302,10 @@ paths:
                 city:
                   type: string
                   example: "Los Angeles"
-                date:
+                created_at:
                   type: string
-                  example: "2023-11-01"
+                  format: date-time
+                  example: "2023-11-01T12:00:00Z"
       responses:
         '200':
           description: Successfully updated

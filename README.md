@@ -180,10 +180,10 @@ We would like to express our deepest gratitude to all the people and institution
 - **Marco Díaz**: Your technical skill and creative input have been pivotal in achieving our goals. Thank you for always being available.
 
 #### Institution
-- **Microverse**: My sincerest thanks for creating this bootcamp. The program's structure and the quality of education provided have been crucial for my growth as a developer.
+- **Microverse**: Our sincerest thanks for creating this bootcamp. The program's structure and the quality of education provided have been crucial for my growth as a developer.
 
 #### Reference Design
-- I would also like to thank [<a href="https://www.behance.net/muratk">Murat Korkmaz</a>] for the original design on Behance that served as inspiration for this project.
+- We would also like to thank [<a href="https://www.behance.net/muratk">Murat Korkmaz</a>] for the original design on Behance that served as inspiration for this project.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

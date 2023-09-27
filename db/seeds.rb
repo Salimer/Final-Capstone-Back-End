@@ -32,5 +32,58 @@ item2 = Item.create(
   removed: false
 )
 
-Reservation.create(user_id: user1.id, item_id: item1.id, city: 'New York')
-Reservation.create(user_id: user2.id, item_id: item2.id, city: 'Los Angeles')
+item3 = Item.create(
+  name: 'Harley Fat Bob',
+  image: 'https://www.harley-davidson.com/content/dam/h-d/images/product-images/bikes/motorcycle/2023/2023-fat-bob-114/2023-fat-bob-114-f85/360/2023-fat-bob-114-f85-motorcycle-01.jpg',
+  description: 'Descripción para Harley Fat Bob',
+  deposit: 3000,
+  finance_fee: 150,
+  option_to_purchase_fee: 75,
+  total_amount_payable: 7500,
+  duration: 48,
+  removed: false
+)
+
+item4 = Item.create(
+  name: 'Harley Fat Bob',
+  image: 'https://www.harley-davidson.com/content/dam/h-d/images/product-images/bikes/motorcycle/2023/2023-fat-bob-114/2023-fat-bob-114-f85/360/2023-fat-bob-114-f85-motorcycle-01.jpg',
+  description: 'Descripción para Harley Fat Bob',
+  deposit: 3000,
+  finance_fee: 150,
+  option_to_purchase_fee: 75,
+  total_amount_payable: 7500,
+  duration: 48,
+  removed: false
+)
+
+item5 = Item.create(
+  name: 'Harley Fat Bob',
+  image: 'https://www.harley-davidson.com/content/dam/h-d/images/product-images/bikes/motorcycle/2023/2023-fat-bob-114/2023-fat-bob-114-f85/360/2023-fat-bob-114-f85-motorcycle-01.jpg',
+  description: 'Descripción para Harley Fat Bob',
+  deposit: 3000,
+  finance_fee: 150,
+  option_to_purchase_fee: 75,
+  total_amount_payable: 7500,
+  duration: 48,
+  removed: false
+)
+
+item6 = Item.create(
+  name: 'Harley Fat Bob',
+  image: 'https://www.harley-davidson.com/content/dam/h-d/images/product-images/bikes/motorcycle/2023/2023-fat-bob-114/2023-fat-bob-114-f85/360/2023-fat-bob-114-f85-motorcycle-01.jpg',
+  description: 'Descripción para Harley Fat Bob',
+  deposit: 3000,
+  finance_fee: 150,
+  option_to_purchase_fee: 75,
+  total_amount_payable: 7500,
+  duration: 48,
+  removed: false
+)
+
+Reservation.create(user_id: user1.id, item_id: item1.id, city: 'New York', date: "25/09/2023")
+Reservation.create(user_id: user1.id, item_id: item2.id, city: 'New York', date: "03/03/2020")
+Reservation.create(user_id: user2.id, item_id: item2.id, city: 'Los Angeles', date: "18/04/2019")
+Reservation.create(user_id: user1.id, item_id: item3.id, city: 'New York', date: "25/09/2023")
+Reservation.create(user_id: user1.id, item_id: item4.id, city: 'New York', date: "03/03/2020")
+Reservation.create(user_id: user1.id, item_id: item5.id, city: 'New York', date: "25/09/2023")
+Reservation.create(user_id: user1.id, item_id: item6.id, city: 'New York', date: "03/03/2020")

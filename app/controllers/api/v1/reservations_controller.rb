@@ -51,7 +51,7 @@ module Api
       private
 
       def reservation_params
-        params.require(:reservation).permit(:user_id, :item_id, :city)
+        params.require(:reservation).permit(:user_id, :item_id, :city, :date)
       end
     end
   end

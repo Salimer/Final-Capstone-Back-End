@@ -15,6 +15,8 @@ module Api
 
       def create
         @reservation = Reservation.new(reservation_params)
+        # parsed_date = Date.strptime(params[:date], "%d/%m/%Y")
+        # @reservation.date = parsed_date
         if @reservation.save
           render json: @reservation, status: :created
         else
@@ -35,7 +37,15 @@ module Api
         @reservations = user.reservations
         render json: @reservations, status: :ok
       rescue ActiveRecord::RecordNotFound
-        render json: { error: 'User not found' }, status: :not_found
+        render json: { error: 'Reservations not found' }, status: :not_found
+      end
+
+      def user_items
+        user = User.find(params[:user_id])
+        @user_items = user.items
+        render json: @user_items, status: :ok
+      rescue ActiveRecord::RecordNotFound
+        render json: { error: 'Items not found' }, status: :not_found
       end
 
       private

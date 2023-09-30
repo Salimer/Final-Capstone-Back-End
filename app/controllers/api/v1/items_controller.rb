@@ -5,7 +5,7 @@ module Api
 
       # GET /items
       def index
-        @items_raw = Item.all
+        @items_raw = Item.order(created_at: :desc).all
         @items = []
 
         @items_raw.each do |item|

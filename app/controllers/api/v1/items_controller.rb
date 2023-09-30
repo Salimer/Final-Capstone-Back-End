@@ -5,14 +5,19 @@ module Api
 
       # GET /items
       def index
-        @items = Item.all
+        @items_raw = Item.order(created_at: :desc).all
+        @items = []
+
+        @items_raw.each do |item|
+          @items << ItemSerializer.new(item).serializable_hash[:data][:attributes]
+        end
 
         render json: @items
       end
 
       # GET /items/1
       def show
-        render json: @item
+        render json: ItemSerializer.new(@item).serializable_hash[:data][:attributes]
       end
 
       # POST /items

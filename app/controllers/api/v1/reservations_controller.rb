@@ -2,7 +2,7 @@ module Api
   module V1
     class ReservationsController < ApplicationController
       def index
-        @reservations = Reservation.all
+        @reservations = Reservation.order(created_at: :desc).all
         render json: @reservations, status: :ok
       end
 

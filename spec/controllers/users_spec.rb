@@ -19,7 +19,7 @@ RSpec.describe Api::V1::UsersController, type: :controller do
       it 'creates and returns the new user' do
         post :create, params: user_params
         expect(response).to have_http_status(:created)
-        expect(User.count).to eq(1) # Assuming you have a fresh database
+        expect(User.count).to eq(1)
         expect(JSON.parse(response.body)['username']).to eq('new_user')
       end
     end

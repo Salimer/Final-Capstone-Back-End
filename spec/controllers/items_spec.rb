@@ -44,7 +44,6 @@ RSpec.describe Api::V1::ItemsController, type: :controller do
     it 'returns errors for invalid data' do
       post :create, params: { item: { name: '' } }
       expect(response).to have_http_status(:unprocessable_entity)
-      # expect(JSON.parse(response.body)).to have_key('errors')
     end
   end
 
@@ -61,7 +60,6 @@ RSpec.describe Api::V1::ItemsController, type: :controller do
     it 'returns errors for invalid data' do
       put :update, params: { id: item.id, item: { name: '' } }
       expect(response).to have_http_status(:unprocessable_entity)
-      # expect(JSON.parse(response.body)).to have_key('errors')
     end
   end
 

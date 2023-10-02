@@ -48,7 +48,6 @@ RSpec.describe Api::V1::ReservationsController, type: :controller do
     it 'returns errors for invalid data' do
       post :create, params: { reservation: { city: '' } }
       expect(response).to have_http_status(:unprocessable_entity)
-      #   expect(JSON.parse(response.body)).to have_key('errors')
     end
   end
 

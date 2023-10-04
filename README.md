@@ -23,6 +23,8 @@
     - [Prerequisites](#prerequisites)
     - [Install](#install)
     - [Usage](#usage)
+    - [Run tests](#run-tests)
+    - [Run rails](#run-rails)
   - [👥 Authors ](#-authors-)
   - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
@@ -103,12 +105,78 @@ npm install
 
 ### Usage
 
-\`\`\`
+In the project directory, run the first time:
+
+  ```
+  bundle exec rake assets:precompile
+  ```
+
+then, you can use:
+
+  ```
+  ./bin/dev
+  ```
+
+or:
+
+  ```
+  rails s
+  ```
+
+Check on db/seed.rb for pre-loaded users, groups and, spendings, and likes for development
+
+### Run tests
+In the project directory, run the first time:
+
+  ```
+  bundle exec rake assets:precompile
+  ```
+then, you can:
+
+  ```
+  rspec .
+  ```
+however, if you haven't run
+```
+./bin/dev
+```
+
+### Run rails
+
+To configure the database connection in Rails, you need to update the database.yml file located in the config folder. Follow these steps: Locate the database.yml file in the config folder of your Rails application.
+
+1. Open the database.yml file using a text editor.
+
+2. Find the default: &default section in the file.
+
+3. Add the following lines under the default: &default section:
+```
+  host: localhost
+  username: your_username
+  password: your_password
+  port: 5432
+```
+ 
+
+4. Replace your_username with your actual database username and your_password with your actual database password.
+5. Save the changes to the database.yml file.
+6. Run
+```
+rails db:create
+```
+
+```
+rails db:migrate
+```
+
+```
+rails db:seed
+```
+
+```
 rails s
-\`\`\`
-\`\`\`
-npm start
-\`\`\`
+```
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

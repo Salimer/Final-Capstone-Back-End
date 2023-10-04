@@ -6,6 +6,7 @@ Rails.application.routes.draw do
       # Get reservations for a user
       get 'users/:user_id/reservations', to: 'reservations#user_reservations'
       get 'users/:user_id/items', to: 'reservations#user_items'
+      post 'reset_database', to: 'application#reset_database'
       
       resources :items
       resources :users

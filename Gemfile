@@ -53,3 +53,4 @@ gem 'rubocop', '>= 1.0', '< 2.0'
 
 gem 'jsonapi-serializer', '~> 2.2'
 gem 'sprockets-rails'
+gem 'aws-sdk-s3'

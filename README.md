@@ -103,12 +103,42 @@ npm install
 
 ### Usage
 
-\`\`\`
-rails s
-\`\`\`
-\`\`\`
-npm start
-\`\`\`
+In the project directory, run the first time:
+
+  ```
+  bundle exec rake assets:precompile
+  ```
+
+then, you can use:
+
+  ```
+  ./bin/dev
+  ```
+
+or:
+
+  ```
+  rails s
+  ```
+
+Check on db/seed.rb for pre-loaded users, groups and, spendings, and likes for development
+
+### Run tests
+In the project directory, run the first time:
+
+  ```
+  bundle exec rake assets:precompile
+  ```
+then, you can:
+
+  ```
+  rspec .
+  ```
+however, if you haven't run ./bin/dev
+
+### Our test screenshot
+
+<img width="741" alt="Screenshot 2023-09-25 at 12 07 22" src="Screenshot (62).png">
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

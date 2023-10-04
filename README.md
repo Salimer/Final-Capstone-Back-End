@@ -134,11 +134,15 @@ then, you can:
   ```
   rspec .
   ```
-however, if you haven't run ./bin/dev
+however, if you haven't run
+```
+./bin/dev
+```
 
 ### Our test screenshot
 
 <img width="741" alt="Screenshot 2023-09-25 at 12 07 22" src="Screenshot (62).png">
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

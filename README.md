@@ -23,6 +23,8 @@
     - [Prerequisites](#prerequisites)
     - [Install](#install)
     - [Usage](#usage)
+    - [Run tests](#run-tests)
+    - [Run rails](#run-rails)
   - [👥 Authors ](#-authors-)
   - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
@@ -152,6 +154,7 @@ To configure the database connection in Rails, you need to update the database.y
   host: localhost
   username: your_username
   password: your_password
+  port: 5432
 ```
  
 
@@ -164,6 +167,10 @@ rails db:create
 
 ```
 rails db:migrate
+```
+
+```
+rails db:seed
 ```
 
 ```

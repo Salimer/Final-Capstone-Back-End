@@ -1,0 +1,339 @@
+openapi: 3.0.3
+info:
+  title: API for Harley Davidson Motorcycle Reservations
+  description: API to manage reservations of different types of elements. Includes CRUD operations for users, elements and reservations.
+  contact: md.marcodiaz2000@gmail.com
+
+# =====================
+# Users Controller
+# =====================
+paths:
+  /api/v1/users:
+    get:
+      summary: Retrieve a list of all users
+      responses:
+        '200':
+          description: Successful operation
+        '401':
+          description: Unauthorized
+    post:
+      summary: Create a new user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                username:
+                  type: string
+                  example: "john_doe"
+      responses:
+        '201':
+          description: Successfully created
+        '400':
+          description: Bad Request
+  /api/v1/users/{user_id}:
+    get:
+      summary: Retrieve a single user by ID
+      parameters:
+      - name: user_id
+        in: path
+        required: true
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: Successful operation
+        '404':
+          description: User not found
+    delete:
+      summary: Delete a user by ID
+      parameters:
+      - name: user_id
+        in: path
+        required: true
+        schema:
+          type: integer
+      responses:
+        '204':
+          description: Successfully deleted
+        '404':
+          description: User not found
+
+# =====================
+# Items Controller
+# =====================
+  /api/v1/items:
+    get:
+      summary: Retrieve a list of all items
+      responses:
+        '200':
+          description: Successful operation
+    post:
+      summary: Create a new item
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: "Harley Davidson XG750"
+                image:
+                  type: string
+                  example: "http://example.com/image.jpg"
+                  nullable: true
+                description:
+                  type: string
+                  example: "This is a description of the Harley Davidson XG750."
+                  nullable: true
+                deposit:
+                  type: number
+                  format: float
+                  example: 200.5
+                  nullable: true
+                finance_fee:
+                  type: number
+                  format: float
+                  example: 50.25
+                  nullable: true
+                option_to_purchase_fee:
+                  type: number
+                  format: float
+                  example: 100.75
+                  nullable: true
+                total_amount_payable:
+                  type: number
+                  format: float
+                  example: 351.5
+                  nullable: true
+                duration:
+                  type: integer
+                  example: 24
+                  nullable: true
+                removed:
+                  type: boolean
+                  example: false                
+      responses:
+        '201':
+          description: Successfully created
+        '400':
+          description: Bad Request
+  /api/v1/items/{item_id}:
+    get:
+      summary: Retrieve a single item by ID
+      parameters:
+      - name: item_id
+        in: path
+        required: true
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: Successful operation
+        '404':
+          description: Item not found
+    delete:
+      summary: Delete an item by ID
+      parameters:
+      - name: item_id
+        in: path
+        required: true
+        schema:
+          type: integer
+      responses:
+        '204':
+          description: Successfully deleted
+        '404':
+          description: Item not found
+    patch:
+      summary: Update an item by ID
+      parameters:
+      - name: item_id
+        in: path
+        required: true
+        schema:
+          type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: "Harley Davidson XG750 Updated"
+                image:
+                  type: string
+                  example: "new_image_url.jpg"
+                description:
+                  type: string
+                  example: "Updated description of the item"
+                deposit:
+                  type: number
+                  example: 1500.00
+                finance_fee:
+                  type: number
+                  example: 200.00
+                option_to_purchase_fee:
+                  type: number
+                  example: 50.00
+                total_amount_payable:
+                  type: number
+                  example: 1750.00
+                duration:
+                  type: integer
+                  example: 24
+                removed:
+                  type: boolean
+                  example: false
+      responses:
+        '200':
+          description: Successfully updated
+        '400':
+          description: Bad Request
+        '404':
+          description: Item not found
+    patch:
+      summary: Mark an item as removed
+      parameters:
+      - name: item_id
+        in: path
+        required: true
+        schema:
+          type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                removed:
+                  type: boolean
+                  example: true
+      responses:
+        '200':
+          description: Successfully marked the item as removed
+        '400':
+          description: Bad Request
+        '404':
+          description: Item not found
+
+# =====================
+# Reservations Controller
+# =====================
+  paths:
+  /api/v1/reservations:
+    get:
+      summary: Retrieve a list of all reservations
+      responses:
+        '200':
+          description: Successful operation
+        '401':
+          description: Unauthorized
+    post:
+      summary: Create a new reservation
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user_id:
+                  type: integer
+                  example: 2
+                item_id:
+                  type: integer
+                  example: 3
+                city:
+                  type: string
+                  example: "New York"
+                date:
+                  type: string
+                  example: "2023-10-01"
+      responses:
+        '201':
+          description: Successfully created
+        '400':
+          description: Bad Request
+  /api/v1/reservations/{reservation_id}:
+    get:
+      summary: Retrieve a single reservation by ID
+      parameters:
+      - name: reservation_id
+        in: path
+        required: true
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: Successful operation
+        '404':
+          description: Reservation not found
+    patch:
+      summary: Update a reservation by ID
+      parameters:
+      - name: reservation_id
+        in: path
+        required: true
+        schema:
+          type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user_id:
+                  type: integer
+                  example: 2
+                item_id:
+                  type: integer
+                  example: 3
+                city:
+                  type: string
+                  example: "Los Angeles"
+                date:
+                  type: string
+                  example: "2023-11-01"
+      responses:
+        '200':
+          description: Successfully updated
+        '400':
+          description: Bad Request
+        '404':
+          description: Reservation not found
+    delete:
+      summary: Delete a reservation by ID
+      parameters:
+      - name: reservation_id
+        in: path
+        required: true
+        schema:
+          type: integer
+      responses:
+        '204':
+          description: Successfully deleted
+        '404':
+          description: Reservation not found
+  /api/v1/users/{user_id}/reservations:
+    get:
+      summary: Retrieve reservations for a specific user
+      parameters:
+      - name: user_id
+        in: path
+        required: true
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: Successful operation
+        '404':
+          description: User not found
